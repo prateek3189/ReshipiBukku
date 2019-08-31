@@ -1,11 +1,28 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
+            <h4>Assignment 1:</h4>
+
             <h3>I am in AppComponent</h3>
             <hr>
             <app-servers></app-servers>
             <!-- <app-warning-alert></app-warning-alert>
             <app-success-alert></app-success-alert> -->
+                    
+            <hr>
+            <h4>Assignment 2:</h4>
+            <label>Username:</label>
+            <input 
+                type="text"
+                class="form-control"
+                [(ngModel)]="username">
+
+            <p>{{ this.username }}</p>
+
+            <button
+                [disabled]="username === ''"
+                (click)="onResetUsername()"
+                class="btn btn-primary">Reset User</button>
         </div>
     </div>
 </div>
